@@ -1,4 +1,4 @@
-{ config, pkgs, theme, ... }: {
+{ config, pkgs, theme, font, ... }: {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
@@ -20,7 +20,7 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        font = "${theme.font} Bold 20";
+        font = "${font.name} Bold ${toString font.size}";
         text-color = mkLiteral "#${theme.foreground}";
         background-color = mkLiteral "#${theme.background}";
         border-color = mkLiteral "#${theme.color8}";
@@ -49,7 +49,7 @@
       };
       "element" = {
         padding = mkLiteral "0px 2px";
-        spacing = mkLiteral "16px";
+        spacing = mkLiteral "8px";
       };
       "element selected" = {
         text-color = theme.background;

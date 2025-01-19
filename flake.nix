@@ -47,8 +47,6 @@
         dark = {
           type = "dark";
 
-          font = "FiraCode";
-
           background = black;
           foreground = lightergray;
 
@@ -79,8 +77,6 @@
         light = {
           type = "light";
 
-          font = "FiraCode";
-
           background = lightergray;
           foreground = black;
 
@@ -110,10 +106,14 @@
         };
       };
       theme = themes.dark;
+      font = {
+        name = "FiraCode";
+        size = 10;
+      };
     in {
       nixosConfigurations."nixos-apple-m2" = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
-        specialArgs = { inherit inputs theme; };
+        specialArgs = { inherit inputs theme font; };
         modules = [
           ./hosts/nixos-apple-m2
           ./hosts/common

@@ -1,12 +1,9 @@
-{ pkgs, theme, ... }:
+{ pkgs, theme, font, ... }:
 let is_dark = if theme.type == "dark" then 1 else 0;
 in {
   gtk = {
+    inherit font;
     enable = true;
-    font = {
-      name = "FiraCode";
-      size = 20;
-    };
     gtk2.configLocation = "/home/armin/.config/gtk-2.0/gtkrc";
     gtk3.extraConfig.gtk-application-prefer-dark-theme = is_dark;
     gtk4.extraConfig.gtk-application-prefer-dark-theme = is_dark;
@@ -25,6 +22,6 @@ in {
     name = "phinger-cursors-dark";
     package = pkgs.phinger-cursors;
     gtk.enable = true;
-    size = 40;
+    size = 28;
   };
 }

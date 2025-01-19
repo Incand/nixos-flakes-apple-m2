@@ -1,4 +1,4 @@
-{ inputs, theme,... }: {
+{ inputs, theme, font, ... }: {
   imports = [
     ./environment.nix
     ./locale.nix
@@ -9,7 +9,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = { inherit inputs theme; };
+    extraSpecialArgs = { inherit inputs theme font; };
     users.armin.imports = [ ../../home ];
   };
 

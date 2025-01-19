@@ -1,11 +1,7 @@
-{ theme, ... }: {
+{ theme, font, ... }: {
   programs.kitty = {
+    inherit font;
     enable = true;
-    font = {
-      name = "FiraCode";
-      size = 20;
-    };
-
     extraConfig = ''
       background	#${theme.background}
       foreground    	#${theme.foreground}

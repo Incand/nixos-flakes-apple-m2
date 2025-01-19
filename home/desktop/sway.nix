@@ -1,10 +1,10 @@
-{ lib, pkgs, theme, ... }: {
+{ lib, pkgs, theme, font, ... }: {
   home.packages = with pkgs; [ dmenu light swayidle swaylock ];
 
   wayland.windowManager.sway = {
     enable = true;
     config = let
-      swaylockCmd = "swaylock -f -c 000000 --font ${theme.font}";
+      swaylockCmd = "swaylock -f -c 000000 --font ${font.name}";
     in rec {
       modifier = "Mod4";
       terminal = "kitty";
@@ -103,9 +103,9 @@
         position = "top";
         statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
         fonts = {
-          names = [ theme.font "FontAwesome6Free" ];
+          names = [ font.name "FontAwesome6Free" ];
           style = "Bold Semi-Condensed";
-          size = 20.0;
+          size = font.size + 1.0 - 1.0;
         };
       }];
       window = {
@@ -114,7 +114,7 @@
       };
 
       seat = { "*".hide_cursor = "when-typing enable"; };
-      output = { "eDP-1".scale = "1"; };
+      output = { "eDP-1".scale = "2"; };
     };
   };
 }
