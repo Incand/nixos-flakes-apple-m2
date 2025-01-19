@@ -1,5 +1,5 @@
 { lib, pkgs, theme, ... }: {
-  home.packages = with pkgs; [ dmenu rofi light swaylock swayidle ];
+  home.packages = with pkgs; [ dmenu light swayidle swaylock ];
 
   wayland.windowManager.sway = {
     enable = true;
@@ -48,7 +48,7 @@
         "${mod}+0" = "exec ${swaylockCmd}";
 
         "${mod}+Return" = "exec kitty";
-        "${mod}+d" = "exec dmenu_run";
+        "${mod}+d" = "exec ${lib.getExe pkgs.rofi} -show drun";
 
         "XF86AudioMute" = "exec ${pkgs.alsa-utils}/bin/amixer sset Master toggle";
         "XF86AudioRaiseVolume" = "exec ${pkgs.alsa-utils}/bin/amixer sset Master 5%+";

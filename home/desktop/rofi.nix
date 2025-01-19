@@ -2,7 +2,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    plugins = with pkgs: [
+    plugins = with pkgs; [
       (rofi-calc.override {
         rofi-unwrapped = rofi-wayland-unwrapped;
       })
@@ -20,18 +20,19 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        font = theme.font;
-        text-color = theme.foreground;
-        background-color = theme.background;
-        border-color = theme.background;
+        font = "${theme.font} Bold 20";
+        text-color = mkLiteral "#${theme.foreground}";
+        background-color = mkLiteral "#${theme.background}";
+        border-color = mkLiteral "#${theme.color8}";
       };
       "window" = {
-        anchor = mkLiteral "northeast";
-        location = mkLiteral "north";
-        y-offset = mkLiteral "24px";
-        width = mkLiteral "50%";
+        anchor = mkLiteral "northwest";
+        location = mkLiteral "northwest";
+        y-offset = mkLiteral "0px";
+        width = mkLiteral "38%";
+        height = mkLiteral "38%";
         padding = mkLiteral "4px";
-        children = mkLiteral [ horibox ];
+        children = mkLiteral "[ horibox ]";
       };
       "horibox" = {
         orientation = mkLiteral "vertical";
@@ -48,6 +49,7 @@
       };
       "element" = {
         padding = mkLiteral "0px 2px";
+        spacing = mkLiteral "16px";
       };
       "element selected" = {
         text-color = theme.background;
