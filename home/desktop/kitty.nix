@@ -2,6 +2,7 @@
   programs.kitty = {
     inherit font;
     enable = true;
+    settings.enable_audio_bell = false;
     extraConfig = ''
       background	#${theme.background}
       foreground    	#${theme.foreground}
