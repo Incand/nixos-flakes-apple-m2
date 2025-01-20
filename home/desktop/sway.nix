@@ -108,6 +108,7 @@
           size = font.size + 1.0 - 1.0;
         };
       }];
+
       window = {
         hideEdgeBorders = "smart";
         titlebar = false;
