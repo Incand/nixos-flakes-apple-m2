@@ -107,6 +107,7 @@
           style = "Bold Semi-Condensed";
           size = font.size + 1.0 - 1.0;
         };
+        extraConfig = "height 56";
       }];
 
       window = {

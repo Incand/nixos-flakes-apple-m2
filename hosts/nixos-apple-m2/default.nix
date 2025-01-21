@@ -22,7 +22,7 @@
 
   boot = {
     # consoleLogLevel = 0;
-    # kernelParams = [ "apple_dcp.show_notch=0" ];
+    kernelParams = [ "apple_dcp.show_notch=1" ];
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = false;
