@@ -17,7 +17,7 @@
     gc.automatic = true;
     settings = {
       warn-dirty = false;
-      experimental-features = [ "nix-command" "flakes" "repl-flake" ];
+      experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
       substituters = [ "https://nix-community.cachix.org" ];
       trusted-public-keys = [
