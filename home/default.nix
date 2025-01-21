@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./cli/git.nix
     ./cli/vim.nix
@@ -7,10 +7,11 @@
     ./desktop/firefox.nix
     ./desktop/fonts.nix
     ./desktop/gtk.nix
+    ./desktop/jetbrains.nix
     ./desktop/i3status-rust.nix
     ./desktop/kitty.nix
-    ./desktop/sway.nix
     ./desktop/rofi.nix
+    ./desktop/sway.nix
   ];
 
   home.packages = with pkgs; [
