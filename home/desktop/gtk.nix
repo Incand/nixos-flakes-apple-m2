@@ -22,6 +22,6 @@ in {
     name = "phinger-cursors-dark";
     package = pkgs.phinger-cursors;
     gtk.enable = true;
-    size = 28;
+    size = 20;
   };
 }

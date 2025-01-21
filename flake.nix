@@ -2,8 +2,7 @@
   description = "Nix Environment";
 
   inputs = {
-    nixpkgs.url =
-      "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixos-apple-silicon = {
       url = "github:tpwrules/nixos-apple-silicon";
@@ -108,7 +107,7 @@
       theme = themes.dark;
       font = {
         name = "FiraCode";
-        size = 10;
+        size = 16;
       };
     in {
       nixosConfigurations."nixos-apple-m2" = nixpkgs.lib.nixosSystem {

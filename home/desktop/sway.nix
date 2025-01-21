@@ -116,7 +116,7 @@
       };
 
       seat = { "*".hide_cursor = "when-typing enable"; };
-      output = { "eDP-1".scale = "2"; };
+      output = { "eDP-1".scale = "1"; };
     };
   };
 }
