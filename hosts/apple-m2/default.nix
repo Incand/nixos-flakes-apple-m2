@@ -1,12 +1,12 @@
-{ inputs, ... }: {
+{ apple-silicon, ... }: {
   imports = [
     ../common
     ./hardware.nix
-    inputs.nixos-apple-silicon.nixosModules.apple-silicon-support
+    apple-silicon.nixosModules.apple-silicon-support
   ];
 
   nixpkgs.overlays = [
-    inputs.nixos-apple-silicon.overlays.apple-silicon-overlay
+    apple-silicon.overlays.apple-silicon-overlay
     (final: prev: { mesa = final.mesa-asahi-edge; })
   ];
 
