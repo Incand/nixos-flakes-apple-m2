@@ -15,6 +15,7 @@
 
   home.packages = with pkgs; [
     bc
+    evince
     htop
     pcmanfm
     thunderbird
