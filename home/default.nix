@@ -16,6 +16,7 @@
   home.packages = with pkgs; [
     bc
     htop
+    pcmanfm
     thunderbird
   ];
 

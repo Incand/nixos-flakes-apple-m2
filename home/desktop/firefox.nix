@@ -141,7 +141,7 @@
         "browser.search.order.1" = "DuckDuckGo";
 
         "signon.rememberSignons" = false;
-        "widget.use-xdg-desktop-portal.file-picker" = 1;
+        "widget.use-xdg-desktop-portal.file-picker" = 0;
         "browser.compactmode.show" = true;
         "browser.cache.disk.enable" = false; # Be kind to hard drive
 
