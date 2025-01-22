@@ -2,10 +2,10 @@
   description = "Nix Environment";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
-    nixos-apple-silicon = {
-      url = "github:tpwrules/nixos-apple-silicon";
+    apple-silicon = {
+      url = "github:tpwrules/nixos-apple-silicon/3daf0637409689d7a1304cedc50d20542bc47905";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, apple-silicon, home-manager, ... }@inputs:
     let
       colors = {
         black = "000000";
@@ -112,9 +112,9 @@
     in {
       nixosConfigurations."nixos-apple-m2" = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
-        specialArgs = { inherit inputs theme font; };
+        specialArgs = { inherit apple-silicon theme font; };
         modules = [
-          ./hosts/nixos-apple-m2
+          ./hosts/apple-m2
           ./hosts/common
           home-manager.nixosModules.home-manager
         ];
