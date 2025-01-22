@@ -38,10 +38,16 @@
   security.pam.services.swaylock = { };
 
   services = {
-    upower.enable = true;
     fstrim.enable = true;
+    logind = {
+      lidSwitch = "lock";
+      lidSwitchDocked = "lock";
+      powerKey = "suspend";
+      powerKeyLongPress = "poweroff";
+    };
     timesyncd.enable = true;
     udisks2.enable = true;
+    upower.enable = true;
   };
 
   boot.loader = {
