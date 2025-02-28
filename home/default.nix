@@ -6,6 +6,7 @@
 
     ./desktop/firefox.nix
     ./desktop/fonts.nix
+    ./desktop/godot_4-mono.nix
     ./desktop/gtk.nix
     ./desktop/jetbrains.nix
     ./desktop/i3status-rust.nix
