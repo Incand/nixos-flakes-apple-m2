@@ -24,7 +24,6 @@
         {
           command = ''
             ${lib.getExe pkgs.swayidle} -w \
-              timeout 180 '${swaylockCmd}' \
               before-sleep '${swaylockCmd}'
           '';
           always = true;
