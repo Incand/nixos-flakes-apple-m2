@@ -4,6 +4,7 @@
     ./cli/vim.nix
     ./cli/zsh.nix
 
+    ./desktop/adwaita-one-dark-gtk-theme
     ./desktop/firefox.nix
     ./desktop/fonts.nix
     ./desktop/gtk.nix
