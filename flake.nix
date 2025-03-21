@@ -2,10 +2,10 @@
   description = "Nix Environment";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     apple-silicon = {
-      url = "github:tpwrules/nixos-apple-silicon/3daf0637409689d7a1304cedc50d20542bc47905";
+      url = "github:tpwrules/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
