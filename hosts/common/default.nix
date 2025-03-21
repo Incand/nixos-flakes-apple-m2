@@ -7,7 +7,7 @@
   ];
 
   home-manager = {
-    useGlobalPkgs = true;
+    useGlobalPkgs = false;
     useUserPackages = true;
     extraSpecialArgs = { inherit theme font; };
     users.armin.imports = [ ../../home ];
