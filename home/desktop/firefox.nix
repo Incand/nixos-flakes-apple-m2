@@ -151,7 +151,7 @@
         #"widget.disable-workspace-management" = true;
 
         # increase UI and font sizes for retina display
-        "layout.css.devPixelsPerPx" = toString ((font.size + 1.0 - 1.0) / 15.0);
+        "layout.css.devPixelsPerPx" = toString ((font.size + 1.0 - 1.0) / 12.0);
         "font.size.variable.x-western" = font.size;
         "font.size.variable.x-unicode" = font.size;
         "font.size.monospace.x-western" = font.size;
