@@ -18,6 +18,7 @@
           repeat_delay = "200";
           repeat_rate = "30";
         };
+        "type:touchpad" = { dwt = "disabled"; };
       };
 
       startup = [
@@ -114,7 +115,7 @@
         titlebar = false;
       };
 
-      seat = { "*".hide_cursor = "when-typing enable"; };
+      seat = { "*".hide_cursor = "when-typing disable"; };
       output = { "eDP-1".scale = "1"; };
     };
   };
