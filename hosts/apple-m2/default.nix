@@ -27,6 +27,9 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = false;
     };
+    extraModprobeConfig = ''
+      options hid_apple fnmode=2
+    '';
   };
 
   networking.hostName = "nixos-apple-m2";
