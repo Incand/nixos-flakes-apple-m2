@@ -12,6 +12,7 @@
     ./desktop/i3status-rust.nix
     ./desktop/kitty.nix
     ./desktop/rofi.nix
+    ./desktop/runelite.nix
     ./desktop/sway.nix
   ];
 
