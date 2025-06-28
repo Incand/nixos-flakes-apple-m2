@@ -8,13 +8,14 @@
 in {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "rider"
-    "rider-with-plugins"
+    # "rider-with-plugins"
     "rust-rover"
-    "rust-rover-with-plugins"
+    # "rust-rover-with-plugins"
   ];
 
   home.packages = with pkgs.jetbrains.plugins; lib.lists.forEach ides (ide:
-    pkgs.jetbrains.plugins.addPlugins ide pluginList
+    # pkgs.jetbrains.plugins.addPlugins ide pluginList
+    ide
   );
 }
 
