@@ -2,14 +2,14 @@
   ides = with pkgs.jetbrains; [
     idea-community
     rider
-    rust-rover
+    # rust-rover
   ];
   pluginList = [ "ideavim" ];
 in {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "rider"
     # "rider-with-plugins"
-    "rust-rover"
+    # "rust-rover"
     # "rust-rover-with-plugins"
   ];
 
