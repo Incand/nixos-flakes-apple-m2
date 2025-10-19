@@ -58,7 +58,7 @@
       # Valid strings for installation_mode are "allowed", "blocked",
       # "force_installed" and "normal_installed".
       ExtensionSettings = {
-        "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+        "*".installation_mode = "allowed"; # blocks all addons except the ones specified below
         # uBlock Origin:
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -83,6 +83,12 @@
           installation_mode = "force_installed";
           default_area = "menubar";
         };
+        # Markdown Reader
+        #"simple-tab-groups@drive4ik" = {
+        #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/markdown_viewer/latest.xpi";
+        #  installation_mode = "force_installed";
+        #  default_area = "menubar";
+        #};
       };
 
       /* ---- PREFERENCES ---- */
