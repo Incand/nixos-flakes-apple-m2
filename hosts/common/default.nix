@@ -40,11 +40,11 @@
 
   services = {
     fstrim.enable = true;
-    logind = {
-      lidSwitch = "lock";
-      lidSwitchDocked = "lock";
-      powerKey = "suspend";
-      powerKeyLongPress = "poweroff";
+    logind.settings.Login = {
+      HandleLidSwitch = "lock";
+      HandleLidSwitchDocked = "lock";
+      HandlePowerKey = "suspend";
+      HandlePowerKeyLongPress = "poweroff";
     };
     timesyncd.enable = true;
     udisks2.enable = true;
