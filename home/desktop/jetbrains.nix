@@ -2,6 +2,7 @@
   ides = with pkgs.jetbrains; [
     idea-community
     rider
+    pycharm-community
     # rust-rover
   ];
   pluginList = [ "ideavim" ];
