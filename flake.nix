@@ -13,8 +13,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
-  outputs = { nixpkgs, apple-silicon, home-manager, ... }@inputs:
+  outputs = { nixpkgs, apple-silicon, home-manager, nix-flatpak, ... }@inputs:
     let
       colors = {
         black = "000000";
@@ -112,10 +114,11 @@
     in {
       nixosConfigurations."nixos-apple-m2" = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
-        specialArgs = { inherit apple-silicon theme font; };
+        specialArgs = { inherit apple-silicon nix-flatpak theme font; };
         modules = [
           ./hosts/apple-m2
           ./hosts/common
+          nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
         ];
       };

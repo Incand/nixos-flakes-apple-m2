@@ -1,6 +1,7 @@
 { theme, font, ... }: {
   imports = [
     ./environment.nix
+    ./flatpak.nix
     ./locale.nix
     ./network.nix
     ./users.nix
