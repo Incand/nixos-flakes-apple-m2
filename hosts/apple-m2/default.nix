@@ -11,12 +11,7 @@
   #];
 
   hardware = {
-    asahi = {
-      peripheralFirmwareDirectory = ./firmware;
-      useExperimentalGPUDriver = true;
-      experimentalGPUInstallMode = "driver";
-      withRust = true;
-    };
+    asahi.peripheralFirmwareDirectory = ./firmware;
     graphics.enable = true;
   };
 
