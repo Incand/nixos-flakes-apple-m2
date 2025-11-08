@@ -1,9 +1,11 @@
 { ... }: {
   programs.git = {
     enable = true;
-    userName = "Armin Schaare";
-    userEmail = "arminschaare@gmail.com";
-    extraConfig = {
+    settings = {
+      user = {
+        email = "arminschaare@gmail.com";
+        name = "Armin Schaare";
+      };
       github.user = "Incand";
       init.defaultBranch = "main";
       alias = { };
