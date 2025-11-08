@@ -21,6 +21,7 @@
     evince
     htop
     pcmanfm
+    python3
     thunderbird
   ];
 
