@@ -11,8 +11,12 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = [ "git" "docker" "docker-compose" ];
       theme = "robbyrussell";
     };
+
+    initContent = ''
+      bindkey '^f' autosuggest-accept
+    '';
   };
 }
