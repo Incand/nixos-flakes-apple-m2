@@ -18,10 +18,12 @@
 
   home.packages = with pkgs; [
     bc
-    evince
     htop
-    pcmanfm
     python3
+    unzip
+
+    evince
+    pcmanfm
     thunderbird
   ];
 
