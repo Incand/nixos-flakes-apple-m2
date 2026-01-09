@@ -61,7 +61,10 @@
     memoryPercent = 100;
   };
 
-  programs.dconf.enable = true;
+  programs = {
+    dconf.enable = true;
+    nix-ld.enable = true;
+  };
 
   virtualisation.docker.enable = true;
 }

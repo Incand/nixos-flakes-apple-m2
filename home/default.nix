@@ -20,8 +20,8 @@
   home.packages = with pkgs; [
     bc
     htop
-    python3
     unzip
+    uv
 
     evince
     pcmanfm
