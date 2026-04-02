@@ -22,6 +22,7 @@
     htop
     unzip
     uv
+    xdg-utils
 
     evince
     pcmanfm
